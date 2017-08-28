@@ -7,11 +7,11 @@ Gem::Specification.new do |spec|
   spec.name          = "rbcore"
   spec.version       = Rbcore::VERSION
   spec.authors       = ["stephenw"]
-  spec.email         = ["zhilong.wang@ele.me"]
+  spec.email         = ["admin@stephenw.cc"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = %q{rbcore command line tool}
+  spec.description   = %q{rbcore command line tool}
+  spec.homepage      = "http://www.stephenw.cc"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -29,6 +29,10 @@ Gem::Specification.new do |spec|
   spec.bindir        = "exe"
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
+
+  spec.add_runtime_dependency "thor", "~> 0"
+  spec.add_runtime_dependency "rainbow", "~> 2.2"
+  spec.add_runtime_dependency "filewatcher", "~> 0"
 
   spec.add_development_dependency "bundler", "~> 1.15"
   spec.add_development_dependency "rake", "~> 10.0"
